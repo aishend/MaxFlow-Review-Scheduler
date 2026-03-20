@@ -17,7 +17,9 @@ set( CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE_TMP} )
 # 4. Criar o executável
 add_executable(myProg
         main.cpp
-        src/ui/Menu.cpp)
+        src/ui/Menu.cpp
+        include/logic/Edmonds-Karp.h
+)
 
 add_definitions(-D_ITERATOR_DEBUG_LEVEL=0)
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")

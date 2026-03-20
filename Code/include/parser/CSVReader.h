@@ -10,7 +10,7 @@
 
 class CSVReader {
 public:
-    // Metodo principal que coordena a leitura de todo o ficheiro
+    // Metodo principal que coordena a leitura do ficheiro
     bool parseFile(const std::string& filename,
                    std::map<int, Submission>& submissions,
                    std::map<int, Reviewer>& reviewers,

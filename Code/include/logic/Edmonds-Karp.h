@@ -1,7 +1,16 @@
+//
+// Created by leandro on 3/19/26.
+//
+
+#ifndef PROJECT_EDMONDS_KARP_H
+#define PROJECT_EDMONDS_KARP_H
+
+#include "../include/data_structures/Graph.h"
+#include <queue>
+
 // Original code by Gonçalo Leão
 // Updated by DA 2024/2025 Team
-
-#include "../data_structures/Graph.h"
+// reused by us
 
 // Function to test the given vertex 'w' and visit it if conditions are met
 template <class T>
@@ -77,7 +86,7 @@ double findMinResidualAlongPath(Vertex<T> *s, Vertex<T> *t) {
 template <class T>
 void augmentFlowAlongPath(Vertex<T> *s, Vertex<T> *t, double f) {
     // Traverse the augmenting path and update the flow values accordingly
- 
+
     auto curr = t;
     while (curr != s) {
         auto e = curr->getPath();
@@ -115,3 +124,5 @@ void edmondsKarp(Graph<T> *g, int source, int target) {
     }
 }
 
+
+#endif //PROJECT_EDMONDS_KARP_H
